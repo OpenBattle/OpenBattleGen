@@ -1,0 +1,2 @@
+# OpenBattleGen
+Message generator
