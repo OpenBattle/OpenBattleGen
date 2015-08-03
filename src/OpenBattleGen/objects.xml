@@ -1,0 +1,31 @@
+<OpenBattle>
+    <object type="BaseInfo">
+        <add name="id" type="unsigned short"/>
+        <add name="type" type="unsigned char"/>
+        <add name="state" type="unsigned char"/>
+    </object>
+    <object type="TeamInfo">
+        <add name="id" type="unsigned short"/>
+        <add name="name" type="char*"/>
+    </object>
+    <object type="PlayerInfo">
+        <add name="id" type="unsigned short"/>
+        <add name="teamId" type="unsigned short"/>
+        <add name="name" type="char*"/>
+    </object>
+    <object type="Rules">
+        <add name="magazine" type="unsigned short"/>
+        <add name="ammo" type="unsigned short"/>
+        <add name="totalAmmo" type="unsigned short"/>
+        <add name="fireRate" type="float"/>
+        <add name="reloadRate" type="float"/>
+        <add name="reloadMode" type="unsigned char"/>
+    </object>
+    <object type="GameParameters">
+        <add name="id" type="char*"/>
+        <add name="players" type="Array&lt;PlayerInfo&gt;"/>
+        <add name="teams" type="Array&lt;TeamInfo&gt;"/>
+        <add name="bases" type="Array&lt;BaseInfo&gt;"/>
+        <add name="rules" type="Rules*"/>
+    </object>
+</OpenBattle>)

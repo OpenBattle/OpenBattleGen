@@ -1,0 +1,59 @@
+<OpenBattle>
+    <message id="1" type="GameParams" source="control" target="remote" carrier="serial">
+        <version major="1">
+            <add name="params" type="GameParameters*"/>
+        </version>
+    </message>
+    <message id="2" type="AssingPlayer" source="remote" target="drone" carrier="ir">
+        <version major="1">
+            <add name="playerId" type="unsigned short"/>
+            <add name="teamId" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="3" type="AssingBase" source="remote" target="base" carrier="ir">
+        <version major="1">
+            <add name="baseId" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="4" type="NeutralBase" source="remote" target="base" carrier="ir">
+        <version major="1">
+            <add name="baseId" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="5" type="TeamBase" source="remote" target="base" carrier="ir">
+        <version major="1">
+            <add name="baseId" type="unsigned short"/>
+            <add name="teamId" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="6" type="ResupplyBase" source="remote" target="base" carrier="ir">
+        <version major="1">
+            <add name="baseId" type="unsigned short"/>
+            <add name="healthRate" type="unsigned short"/>
+            <add name="ammoRate" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="7" type="HitReport" source="drone" carrier="radio">
+        <version major="1">
+            <add name="targetId" type="unsigned short"/>
+            <add name="sourceId" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="8" type="BaseCapture" source="base" carrier="radio">
+        <version major="1">
+            <add name="baseId" type="unsigned short"/>
+            <add name="playerId" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="9" type="Resupply" source="base,remote" carrier="ir">
+        <version major="1">
+            <add name="ammo" type="unsigned short"/>
+            <add name="health" type="unsigned short"/>
+        </version>
+    </message>
+    <message id="10" type="Information" source="remote" carrier="serial">
+        <version major="1">
+            <add name="message" type="char*"/>
+        </version>
+    </message>
+</OpenBattle>
